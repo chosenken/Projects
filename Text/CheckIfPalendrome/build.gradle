@@ -1,0 +1,22 @@
+apply plugin:'java'
+apply plugin:'eclipse'
+
+repositories{
+    mavenCentral()
+}
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'CheckIfPalendrome', 'Implementation-Version': version, 'Main-Class': 'CheckIfPalendrome'
+    }
+}
+
+dependencies{
+
+    // the production code uses the slf4j logging api at compile time
+    compile 'org.slf4j:slf4j-api:1.7.5'
+
+    testCompile "junit:junit:4.11"
+}
